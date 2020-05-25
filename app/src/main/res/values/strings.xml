@@ -145,4 +145,5 @@
     <string name="order_address">Địa chỉ giao hàng:</string>
     <string name="hint_chat">Bạn đang nghĩ gì...</string>
     <string name="join_channel_failed">Không thể tham gia phòng tán</string>
+    <string name="menu_logout">Đăng xuất</string>
 </resources>
