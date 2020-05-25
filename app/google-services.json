@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "158226619476",
+    "firebase_url": "https://gomimall.firebaseio.com",
+    "project_id": "gomimall",
+    "storage_bucket": "gomimall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158226619476:android:21daca64e4c2b48deca1c1",
+        "android_client_info": {
+          "package_name": "vn.gomimall.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158226619476-7qni7rrm7jhao528lme2n2ulfu040s07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.gomimall.apps",
+            "certificate_hash": "ce52f2b63540fa8ce82b98a0eb5a40419a7df587"
+          }
+        },
+        {
+          "client_id": "158226619476-08nrnhgebg1sou7khnh262lcgjaqhu6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhZCn5uImU_iUN6RAPPkRizBiKPrGojXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158226619476-08nrnhgebg1sou7khnh262lcgjaqhu6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

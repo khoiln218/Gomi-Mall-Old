@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Standard -->
+    <dimen name="padding_xsmall">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_xlarge">36dp</dimen>
+
+
+    <!-- Icon -->
+    <dimen name="icon_size_standard">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="icon_size_xlarge">48dp</dimen>
+
+    <dimen name="icon_mega_cate">40dp</dimen>
+
+
+    <dimen name="avatar_size">96dp</dimen>
+    <dimen name="avatar_radius">48dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_radius_standard">24dp</dimen>
+    <dimen name="button_height_standard">48dp</dimen>
+    <dimen name="button_height_small">36dp</dimen>
+    <dimen name="button_width_180">180dp</dimen>
+    <dimen name="button_width_108">108dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_xlarge">30sp</dimen>
+
+    <!-- Live -->
+    <dimen name="live_room_bg_icon_size">180dp</dimen>
+    <dimen name="live_stat_margin_bottom">68dp</dimen>
+    <dimen name="live_top_layout_height">76dp</dimen>
+    <dimen name="live_leave_btn_size">36dp</dimen>
+    <dimen name="live_top_layout_margin">22dp</dimen>
+    <dimen name="live_name_board_width">186dp</dimen>
+    <dimen name="live_name_board_height">48dp</dimen>
+    <dimen name="live_name_board_icon_size">44dp</dimen>
+    <dimen name="live_name_board_icon_margin">2dp</dimen>
+    <dimen name="live_name_board_fav_icon_size">36dp</dimen>
+    <dimen name="live_name_board_fav_icon_margin">6dp</dimen>
+    <dimen name="live_name_text_height">24dp</dimen>
+    <dimen name="live_name_text_margin_left">8dp</dimen>
+    <dimen name="live_bottom_layout_margin">18dp</dimen>
+    <dimen name="live_bottom_btn_size">44dp</dimen>
+    <dimen name="live_bottom_btn_margin">12dp</dimen>
+    <dimen name="live_name_board_radius">36dp</dimen>
+    <dimen name="live_chat_box">62dp</dimen>
+</resources>

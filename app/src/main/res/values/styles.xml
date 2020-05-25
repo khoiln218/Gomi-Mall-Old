@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.CollapsingToolbarLayoutExpandedTextStyle" parent="AppTheme">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">0sp</item>
+    </style>
+
+    <!-- Button -->
+    <style name="AppTheme.ButtonPrimary" parent="AppTheme.Base">
+        <item name="android:background">@drawable/button_primary_selector</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">?android:textAppearance</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.ButtonOutline" parent="AppTheme.Base">
+        <item name="android:background">@drawable/button_outline_selector</item>
+        <item name="android:textColor">@drawable/button_outline_color</item>
+        <item name="android:textAppearance">?android:textAppearance</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- -->
+    <style name="AppTheme.TabIndicator" parent="Base.Widget.Design.TabLayout">
+        <item name="android:clipToPadding">true</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabBackground">@drawable/tab_indicator_selector</item>
+        <item name="tabContentStart">0dp</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabPaddingStart">6dp</item>
+    </style>
+</resources>

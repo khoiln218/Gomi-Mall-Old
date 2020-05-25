@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="signInViewModel"
+            type="vn.gomimall.apps.ui.authen.signin.SignInViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--TODO: Banner Image-->
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_login_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--TODO: Login Form-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_banner"
+            app:setError="@{signInViewModel.userNameError}"
+            app:setErrorEnabled="@{signInViewModel.userNameEnableError}">
+
+            <EditText
+                android:id="@+id/input_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:afterTextChanged="@{(s) -> signInViewModel.afterTextChanged()}"
+                android:hint="@string/hint_user_name"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:text="@={signInViewModel.userName}"
+                android:textAppearance="?android:textAppearance"
+                app:requestFocus="@{signInViewModel.userNameRequestFocus}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_user_name"
+            app:passwordToggleEnabled="true"
+            app:setError="@{signInViewModel.passwordError}"
+            app:setErrorEnabled="@{signInViewModel.passwordEnableError}">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:afterTextChanged="@{(s) -> signInViewModel.afterTextChanged()}"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text="@={signInViewModel.password}"
+                android:textAppearance="?android:textAppearance"
+                app:requestFocus="@{signInViewModel.passwordRequestFocus}"
+                app:setOnEditorActionListener="@{signInViewModel}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@null"
+            android:onClick="@{()->signInViewModel.forgetPassword()}"
+            android:stateListAnimator="@null"
+            android:text="@string/forget_password"
+            android:textAppearance="?android:textAppearance"
+            android:textColor="@color/colorPrimaryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_password" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/AppTheme.ButtonPrimary"
+            android:layout_width="@dimen/button_width_180"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="@{signInViewModel.enableLoginBtn, default=false}"
+            android:onClick="@{()->signInViewModel.signIn()}"
+            android:stateListAnimator="@null"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_forget_password" />
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:onClick="@{()->signInViewModel.signUp()}"
+            android:stateListAnimator="@null"
+            android:text="@string/no_have_account"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_progress"
+            android:visibility="@{signInViewModel.isProgressing?View.VISIBLE:View.GONE, default=gone}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
