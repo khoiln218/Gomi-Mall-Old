@@ -35,6 +35,13 @@ public class LiveFragment extends BaseFragment<LiveViewModel, LiveFragmentBindin
         return binding.getRoot();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getViewModel().showLoading();
+        getViewModel().onRefresh();
+    }
+
     private void initCmd() {
         getViewModel().getCmd().observe(getViewLifecycleOwner(), new Observer<LiveEvent>() {
             @Override

@@ -73,4 +73,9 @@ public class ApiConfig {
         Retrofit retrofit = createRetrofit(EndPoint.BASE_URL);
         return retrofit.create(ApiService.class);
     }
+
+    public static final AgoraService getAgoraClient() {
+        Retrofit retrofit = createRetrofit(AgoraEndPoint.BASE_URL);
+        return retrofit.create(AgoraService.class);
+    }
 }
