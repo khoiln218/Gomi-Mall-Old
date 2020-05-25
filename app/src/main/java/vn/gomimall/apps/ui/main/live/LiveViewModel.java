@@ -3,9 +3,14 @@ package vn.gomimall.apps.ui.main.live;
 import androidx.lifecycle.MutableLiveData;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import io.agora.rtm.ErrorInfo;
+import io.agora.rtm.ResultCallback;
+import io.agora.rtm.RtmClient;
 import vn.gomimall.apps.Application;
 import vn.gomimall.apps.BaseViewModel;
 import vn.gomimall.apps.R;
@@ -15,6 +20,7 @@ import vn.gomimall.apps.data.model.api.AgoraResponseData;
 import vn.gomimall.apps.data.model.pojo.AgoraChannels;
 import vn.gomimall.apps.data.model.pojo.Channel;
 import vn.gomimall.apps.event.LiveHandler;
+import vn.gomimall.apps.ui.main.MainEvent;
 
 public class LiveViewModel extends BaseViewModel<LiveEvent> implements LiveHandler, SwipeRefreshLayout.OnRefreshListener {
 
@@ -25,10 +31,10 @@ public class LiveViewModel extends BaseViewModel<LiveEvent> implements LiveHandl
     private List<Channel> channels;
     private ChannelAdapter adapter;
 
-//    private RtmClient mRtmClient;
+    private RtmClient mRtmClient;
 
     public LiveViewModel() {
-//        mRtmClient = Application.getInstance().getChatManager().getRtmClient();
+        mRtmClient = Application.getInstance().getChatManager().getRtmClient();
         mAgoraRepository = AgoraRepository.getInstance();
         channelAdapterMutableLiveData = new MutableLiveData<>();
 
@@ -37,23 +43,20 @@ public class LiveViewModel extends BaseViewModel<LiveEvent> implements LiveHandl
         channelAdapterMutableLiveData.setValue(adapter);
     }
 
-//    public void startBroadcast() {
-//        mRtmClient.login(null, Application.getPreferences().getUserName(), new ResultCallback<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                EventBus.getDefault().post(new MainEvent<>(MainEvent.REQUEST_PERMISSION_LIVE));
-//            }
-//
-//            @Override
-//            public void onFailure(final ErrorInfo errorInfo) {
-//                if (errorInfo.getErrorCode() == RtmStatusCode.LoginError.LOGIN_ERR_ALREADY_LOGIN) {
-//                    EventBus.getDefault().post(new MainEvent<>(MainEvent.REQUEST_PERMISSION_LIVE));
-//                } else {
-//                    EventBus.getDefault().post(new LiveEvent(LiveEvent.LOGIN_FAILS, errorInfo.toString()));
-//                }
-//            }
-//        });
-//    }
+    public void viewLive() {
+        mRtmClient.logout(null);
+        mRtmClient.login(null, Application.getPreferences().getUserName(), new ResultCallback<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                EventBus.getDefault().post(new MainEvent<>(MainEvent.REQUEST_PERMISSION_LIVE));
+            }
+
+            @Override
+            public void onFailure(final ErrorInfo errorInfo) {
+                EventBus.getDefault().post(new LiveEvent(LiveEvent.LOGIN_FAILS, errorInfo.toString()));
+            }
+        });
+    }
 
 
     @Override
@@ -95,6 +98,7 @@ public class LiveViewModel extends BaseViewModel<LiveEvent> implements LiveHandl
 
     @Override
     public void onView(Channel channel) {
-
+        Application.getInstance().engineConfig().setChannelName(channel.getChannel_name());
+        viewLive();
     }
 }

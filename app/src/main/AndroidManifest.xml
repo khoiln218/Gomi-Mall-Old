@@ -34,6 +34,7 @@
         <activity android:name=".ui.authen.signup.SignUpActivity" />
         <activity android:name=".ui.authen.signin.SignInActivity" />
         <activity android:name=".ui.authen.forget.reset.ResetPasswordActivity" />
+        <activity android:name=".ui.main.live.video.LiveActivity" />
     </application>
 
 </manifest>

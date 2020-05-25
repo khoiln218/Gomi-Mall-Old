@@ -39,61 +39,13 @@
     <string name="msg_resend">Gửi lại sau %ds</string>
 
     <!--Shop-->
-    <string name="err_input_url">Chỉ các chữ cái (a&#8211;z), số (0&#8211;9) và (-) được cho phép.</string>
-    <string name="shop_name">Tên cửa hàng</string>
-    <string name="hint_shop_name">Tên cửa hàng</string>
-    <string name="verify_url">Xác minh</string>
-    <string name="take_photo">Chụp ảnh</string>
-    <string name="choose_image_gallery">Chọn ảnh từ bộ sưu tập</string>
-    <string name="view_photo">Xem ảnh</string>
-    <string name="remove_photo">Xóa ảnh</string>
-    <string name="cover">Ảnh bìa(ảnh thu nhỏ)</string>
 
     <!--Main-->
-    <string name="view">Xem thêm</string>
     <string name="banner">Banner</string>
-    <string name="add_product">Thêm sản phẩm</string>
-    <string name="sub_product">Xóa sản phẩm</string>
-    <string name="product_seen">Sản phẩm đã xem</string>
-    <string name="no_result">Không có kết quả tìm kiếm</string>
-    <string name="product_attribute">Thông tin chi tiết</string>
-    <string name="withdrawn">Rút tiền</string>
-    <string name="setting">Cài đặt</string>
-    <string name="notify">Thông báo</string>
-    <string name="invite">Invite</string>
-    <string name="coupon">Coupon</string>
-    <string name="empty">Chưa có sản phẩm</string>
-    <string name="order_empty">Chưa có đơn hàng</string>
-    <string name="notify_empty">Chưa có thông báo</string>
     <string name="network_error">Không có kết nối mạng. Vui lòng <strong> thử lại </strong></string>
-    <string name="view_detail">Xem chi tiết</string>
-    <string name="product_description">Mô tả sản phẩm</string>
 
-    <string name="html" translatable="false"><![CDATA[<!DOCTYPE html><html><head>
-                                <meta http-equiv="content-type" content="text/html; charset=utf-8">
-                                <meta name="viewport" content="width={width}, initial-scale=0.65" />
-                                <style>img{display: inline; height: auto; max-width: 100%;}</style>
-                                </head><body>{body_content}</body></html>]]></string>
-    <string name="withdrawn_bank">Rút tiền về tài khoản của bạn</string>
-    <string name="withdrawn_coupon">Chọn phiếu giảm giá</string>
-    <string name="btn_continue">Tiếp tục</string>
-    <string name="receiving_account">Đã xác thực</string>
-    <string name="amount">Số tiền</string>
-    <string name="transaction_fee">Phí giao dịch</string>
-    <string name="receive">Số tiền nhận được</string>
-    <string name="receive_note">Chuyển tiền sẽ được hoàn thành trong 2 ngày làm việc.</string>
-    <string name="btn_back">Trở lại</string>
-    <string name="select_bank">Chọn ngân hàng</string>
-    <string name="account_holder">Chủ tài khoản</string>
-    <string name="account_number">Số tài khoản</string>
-    <string name="btn_complete">Xong</string>
-    <string name="bank_management">Quản lý tài khoản</string>
     <string name="network_connected">Đã có kết nối mạng</string>
     <string name="network_lost">Không có kết nối mạng</string>
-    <string name="share">Share</string>
-    <string name="share_sub">[AD]Gomi Corporation</string>
-    <string name="shop_des">Mô tả cửa hàng</string>
-    <string name="hint_shop_des">Mô tả cửa hàng có thể dài tới %s ký tự</string>
     <string name="title_oops">Oops</string>
     <string name="btn_ok">Đồng ý</string>
     <string name="btn_cancel">Hủy</string>
@@ -102,47 +54,12 @@
     <string name="msg_need_camera_permission">%s cần truy cập máy ảnh. Vui lòng sửa nó trong tab cài đặt.</string>
     <string name="change_password_succsess">Đổi mật khẩu thành công</string>
     <string name="exit_app">Tiếp tục nhấn phím BACK để thoát</string>
-    <string name="not_result">Không tìm thấy kết quả</string>
     <string name="hint_confirm_password">Nhập lại mật khẩu</string>
-    <string name="hint_old_password">Mật khẩu hiện tại</string>
-    <string name="change_password">Thay đổi mật khẩu</string>
-    <string name="gender">Giới tính</string>
-    <string name="birthday">Ngày sinh</string>
-    <string name="hint_birthday">Ngày sinh</string>
-    <string name="account_change_info">Thay đổi thông tin cá nhân</string>
-    <string name="err_text_empty">Vui lòng nhập</string>
     <string name="err_password_confirm">Mật khẩu không trùng khớp</string>
-    <string name="select_birthday_title">Chọn ngày sinh</string>
-    <string name="btn_change">Sửa</string>
-    <string name="account_update_success">Cập nhật thông tin thành công</string>
-    <string name="change_password_success">Đổi mật khẩu thành công</string>
-    <string name="change_avatar_success">Cập nhật ảnh đại diện thành công</string>
-    <string name="view_term">Xem điều khoản</string>
-    <string name="open_source">Giấy phép mã nguồn mở</string>
-    <string name="notice">Thông báo</string>
-    <string name="sign_out">Đăng xuất</string>
-    <string name="version">Phiên bản</string>
-    <string name="setting_title">Cài đặt ứng dụng</string>
-    <string name="logout">Bạn đã đăng xuất khỏi hệ thống</string>
     <string name="logout_msg">Bạn có chắc chắn muốn đăng xuất?</string>
     <string name="btn_confirm">Xác nhận</string>
-    <string name="url">Địa chỉ website</string>
     <string name="confirm_password">Xác nhận mật khẩu</string>
-    <string name="update_shop_info">Cập nhật thông tin cửa hàng</string>
-    <string name="district_title">Chọn Quận/Huyện</string>
-    <string name="select">Chọn</string>
-    <string name="province_title">Chọn Tỉnh/Thành Phố</string>
-    <string name="order_title">Danh sách đơn hàng</string>
-    <string name="order_detail_title">Chi tiết đơn hàng</string>
 
-    <string name="default_notification_channel_id">gomi_default_channel</string>
-    <string name="default_notification_channel_name">Gomi</string>
-    <string name="default_notification_channel_description">Gomi Notification</string>
-    <string name="order_profit">Doanh thu:</string>
-    <string name="order_total_price">Thành tiền đơn hàng:</string>
-    <string name="order_payment_method">Phương thức thanh toán:</string>
-    <string name="order_customer">Khách hàng:</string>
-    <string name="order_address">Địa chỉ giao hàng:</string>
     <string name="hint_chat">Bạn đang nghĩ gì...</string>
     <string name="join_channel_failed">Không thể tham gia phòng tán</string>
     <string name="menu_logout">Đăng xuất</string>

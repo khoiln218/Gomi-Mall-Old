@@ -27,6 +27,7 @@ import vn.gomimall.apps.BaseActivity;
 import vn.gomimall.apps.R;
 import vn.gomimall.apps.databinding.ActivityMainBinding;
 import vn.gomimall.apps.ui.main.live.LiveFragment;
+import vn.gomimall.apps.ui.main.live.video.LiveActivity;
 import vn.gomimall.apps.utils.AlertDialogs;
 import vn.gomimall.apps.utils.Intents;
 import vn.gomimall.apps.utils.LogUtils;
@@ -183,7 +184,7 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
             @Override
             public void onPermissionGranted() {
                 if (type == MainEvent.REQUEST_PERMISSION_LIVE) {
-                    startBroadcast();
+                    viewLive();
                 }
             }
 
@@ -204,8 +205,8 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
         });
     }
 
-    private void startBroadcast() {
-//        startActivity(new Intent(this, LiveActivity.class));
+    private void viewLive() {
+        startActivity(new Intent(this, LiveActivity.class));
     }
 
     private void showPermissionDialog() {
