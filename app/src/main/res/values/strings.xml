@@ -60,7 +60,9 @@
     <string name="btn_confirm">Xác nhận</string>
     <string name="confirm_password">Xác nhận mật khẩu</string>
 
-    <string name="hint_chat">Bạn đang nghĩ gì...</string>
+    <string name="hint_chat">Bạn đang nghĩ gì…</string>
     <string name="join_channel_failed">Không thể tham gia phòng tán</string>
     <string name="menu_logout">Đăng xuất</string>
+
+    <string name="msg_welcome">Chào mừng đến với Gomi Live! Chúc bạn có khoảng thời gian thoải mái.</string>
 </resources>
