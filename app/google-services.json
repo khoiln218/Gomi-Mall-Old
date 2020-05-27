@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "158226619476-sepltsc1uqe56ife9lb85e88arni89if.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.gomimall.apps",
+            "certificate_hash": "0ff01b0ae249b5cb5c950694a10a11d76fca45a0"
+          }
+        },
+        {
           "client_id": "158226619476-7qni7rrm7jhao528lme2n2ulfu040s07.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
